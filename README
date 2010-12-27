@@ -1,0 +1,23 @@
+Page collector (Opera extension)
+Tag pages (= pages or links) for later viewing on a new page.
+
+Usage
+=====
+Tagging:
+On a tab: <tag-command> "tag name" <enter>
+On a link on a page: shift-ctrl-enter on highlighted link, then "tag name" <enter>
+On a link from the outside: <tag-link-command> <input link> "tag name" <enter>
+
+Collecting:
+<new-window-from-tags-command> <autocomplete tag> <enter>
+Brings up all links tagged from that window.
+
+<bookmark-from-tags-command> <autocomplete tag> <enter>
+Save pages from tag in new folder.
+
+TODO
+=====
+0. Tag new link (like ctrl-l)
+1. Tag current page
+2. New window from tags.
+

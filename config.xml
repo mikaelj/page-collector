@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="extensions:page-collector" version="1.0.2">
+  <name>page-collector</name>
+  <description>Open links in a background tab on long press</description>
+  <author href="http://mikael.jansson.be/" email="mail@mikael.jansson.be">Mikael Jansson</author>
+  <icon src="icons/icon64.png"/>
+  <!--
+  <update-description href="https://extension-updates.opera.com/api/w3c-wd1/update/e30a627eb08f4da895b98f57871912f4/"/>
+  -->
+</widget>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+        opera.extension.onmessage = function(e){
+            var data = JSON.parse(e.data);
+            var storage = data["storage"];
+            for (var s in storage)
+                opera.postError("* " + s + ": " + storage[s]);
+
+            var pages = storage[data["tag"]];
+            if (!pages)
+                pages = [];
+            pages.push(data["url"]);
+            opera.postError("pages = "+pages);
+            for (var i in pages) {
+                var str = "";
+                for (var p in i) {
+                    str += "* " + p + "=>" + i[p] + "\n";
+                }
+                opera.postError(str);
+            }
+            storage[data["tag"]] = pages;
+            opera.extension.tabs.create({url: data["url"], focused: false})
+        };
+
+
+        var ToolbarUIItemProperties = {
+            title: "Collected pages.",
+            icon: "icons/icon18.png",
+            popup: {
+                href: "popup.html",
+                width: 440,
+                height: 425
+            },
+            badge: {
+                display: "block",
+                textContent: "3/42",
+                color: "white"
+            }
+        }
+        var theButton = opera.contexts.toolbar.createItem(ToolbarUIItemProperties);
+        opera.contexts.toolbar.addItem(theButton);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
